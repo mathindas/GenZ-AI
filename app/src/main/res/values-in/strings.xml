@@ -1,0 +1,50 @@
+<resources>
+    <!-- App Generic -->
+    <string name="app_name">GenZ AI</string>
+    <string name="search_hint">Cari alat...</string>
+    
+    <!-- Menu -->
+    <string name="menu_settings">Pengaturan</string>
+    <string name="menu_about">Tentang Pembuat</string>
+    
+    <!-- Home Screen -->
+    <string name="ai_ngeles_pro">AI Ngeles Pro</string>
+    <string name="ai_ngeles_pro_desc">Buat alasan kreatif dengan mudah</string>
+    
+    <!-- Settings Screen -->
+    <string name="settings_title">Pengaturan</string>
+    <string name="settings_language">Bahasa</string>
+    <string name="settings_theme">Mode Gelap</string>
+    <string name="settings_api_key">Kunci API Kustom</string>
+    <string name="settings_api_key_hint">Masukkan Kunci API Gemini AI</string>
+    <string name="settings_save">Simpan</string>
+    <string name="language_english">English</string>
+    <string name="language_indonesian">Bahasa Indonesia</string>
+    
+    <!-- About Screen -->
+    <string name="about_title">Tentang Pembuat</string>
+    <string name="about_name">Rivaldo Rendy</string>
+    <string name="about_role">Pengembang Aplikasi Mobile</string>
+    <string name="about_description">Saya adalah Pengembang Mobile yang bersemangat dengan fokus pada pembuatan aplikasi yang inovatif dan ramah pengguna. Saya senang menggabungkan teknologi dengan kreativitas untuk memberikan pengalaman pengguna yang luar biasa.</string>
+    <string name="about_email">rr_mathindas@gmail.com</string>
+    <string name="about_website">https://github.com/mathindas</string>
+    
+    <!-- AI Ngeles Pro Screen -->
+    <string name="ai_ngeles_pro_title">AI Ngeles Pro</string>
+    <string name="time_of_day">Waktu</string>
+    <string name="relationship">Hubungan</string>
+    <string name="call_title">Panggilan</string>
+    <string name="call_title_hint">mis. Pak, Bu, Mbak, dll.</string>
+    <string name="excuse_type">Jenis Alasan</string>
+    <string name="excuse_reason_detail">Detail Alasan</string>
+    <string name="excuse_reason_detail_hint">mis. macet total, lupa alarm, dll.</string>
+    <string name="mood_level">Tingkat Suasana</string>
+    <string name="mood_level_formal">Formal</string>
+    <string name="mood_level_casual">Santai</string>
+    <string name="generate_excuse">Buat Alasan</string>
+    <string name="copy_text">Salin Teks</string>
+    <string name="share">Bagikan</string>
+    <string name="loading">Membuat alasan...</string>
+    <string name="result_hint">Alasan yang dibuat akan muncul di sini</string>
+    <string name="copied_to_clipboard">Disalin ke clipboard</string>
+</resources> 

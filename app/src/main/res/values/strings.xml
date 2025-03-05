@@ -1,0 +1,50 @@
+<resources>
+    <!-- App Generic -->
+    <string name="app_name">GenZ AI</string>
+    <string name="search_hint">Search tools...</string>
+    
+    <!-- Menu -->
+    <string name="menu_settings">Settings</string>
+    <string name="menu_about">About Creator</string>
+    
+    <!-- Home Screen -->
+    <string name="ai_ngeles_pro">AI Ngeles Pro</string>
+    <string name="ai_ngeles_pro_desc">Create creative excuses effortlessly</string>
+    
+    <!-- Settings Screen -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_language">Language</string>
+    <string name="settings_theme">Dark Mode</string>
+    <string name="settings_api_key">Custom API Key</string>
+    <string name="settings_api_key_hint">Enter your Gemini AI API Key</string>
+    <string name="settings_save">Save</string>
+    <string name="language_english">English</string>
+    <string name="language_indonesian">Bahasa Indonesia</string>
+    
+    <!-- About Screen -->
+    <string name="about_title">About Creator</string>
+    <string name="about_name">Rivaldo Rendy</string>
+    <string name="about_role">Mobile Developer</string>
+    <string name="about_description">I am a passionate Mobile Developer with a focus on creating innovative and user-friendly applications. I love combining technology with creativity to deliver exceptional user experiences.</string>
+    <string name="about_email">rr_mathindas@gmail.com</string>
+    <string name="about_website">https://github.com/mathindas</string>
+    
+    <!-- AI Ngeles Pro Screen -->
+    <string name="ai_ngeles_pro_title">AI Ngeles Pro</string>
+    <string name="time_of_day">Time of Day</string>
+    <string name="relationship">Relationship</string>
+    <string name="call_title">Call Title</string>
+    <string name="call_title_hint">e.g. Pak, Bu, Mbak, etc.</string>
+    <string name="excuse_type">Excuse Type</string>
+    <string name="excuse_reason_detail">Excuse Reason Detail</string>
+    <string name="excuse_reason_detail_hint">e.g. traffic jam, alarm didn\'t go off, etc.</string>
+    <string name="mood_level">Mood Level</string>
+    <string name="mood_level_formal">Formal</string>
+    <string name="mood_level_casual">Casual</string>
+    <string name="generate_excuse">Buat Alasan</string>
+    <string name="copy_text">Copy Text</string>
+    <string name="share">Share</string>
+    <string name="loading">Generating excuse...</string>
+    <string name="result_hint">Your generated excuse will appear here</string>
+    <string name="copied_to_clipboard">Copied to clipboard</string>
+</resources>
