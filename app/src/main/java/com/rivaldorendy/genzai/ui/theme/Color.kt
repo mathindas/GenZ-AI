@@ -23,3 +23,11 @@ val SurfaceLight = Color(0xFFFFFFFF)
 val SurfaceDark = Color(0xFF1E1E1E)
 val OnBackgroundLight = Color(0xFF1A1A1A)
 val OnBackgroundDark = Color(0xFFE6E6E6)
+
+// Home Screen Colors
+val HomeBackgroundLight = Color(0xFFD8F0FC)
+val HomeBackgroundDark = Color(0xFF0A1A22)
+val CardBackgroundLight = Color(0xFFFFFFFF)
+val CardBackgroundDark = Color(0xFF1E1E1E)
+val InfoButtonBackground = Color(0xFF2196F3)
+val InfoButtonBackgroundDark = Color(0xFF0D47A1)

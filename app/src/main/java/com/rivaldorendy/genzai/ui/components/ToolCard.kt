@@ -1,14 +1,18 @@
 package com.rivaldorendy.genzai.ui.components
 
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Info
@@ -27,12 +31,16 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
+import com.rivaldorendy.genzai.R
 import com.rivaldorendy.genzai.data.model.AITool
+import com.rivaldorendy.genzai.ui.theme.CardBackgroundLight
+import com.rivaldorendy.genzai.ui.theme.InfoButtonBackground
 
 /**
  * Card component for displaying an AI tool
@@ -47,61 +55,60 @@ fun ToolCard(
     
     ElevatedCard(
         modifier = modifier
-            .height(130.dp)
-            .clip(RoundedCornerShape(16.dp))
+            .height(200.dp)
+            .clip(RoundedCornerShape(24.dp))
             .clickable(onClick = onClick),
         elevation = CardDefaults.cardElevation(
             defaultElevation = 2.dp
         ),
-        shape = RoundedCornerShape(16.dp)
+        shape = RoundedCornerShape(24.dp),
+        colors = CardDefaults.cardColors(
+            containerColor = CardBackgroundLight
+        )
     ) {
-        Box(modifier = Modifier.fillMaxWidth()) {
-            // Info icon in the top left
-            IconButton(
-                onClick = { showInfoDialog = true },
+        Column(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            // Food Image
+            Image(
+                painter = painterResource(id = R.drawable.img_food),
+                contentDescription = null,
                 modifier = Modifier
-                    .align(Alignment.TopStart)
-                    .size(32.dp)
-                    .padding(4.dp)
-            ) {
-                Icon(
-                    imageVector = Icons.Default.Info,
-                    contentDescription = "Tool Info",
-                    tint = MaterialTheme.colorScheme.primary,
-                    modifier = Modifier.size(16.dp)
-                )
-            }
+                    .fillMaxWidth()
+                    .aspectRatio(1f)
+                    .padding(16.dp),
+                contentScale = ContentScale.Crop
+            )
             
-            // Tool content
-            Column(
+            // Tool name
+            Text(
+                text = tool.name,
+                style = MaterialTheme.typography.titleMedium,
+                textAlign = TextAlign.Center,
+                modifier = Modifier.padding(horizontal = 8.dp)
+            )
+            
+            // Info Button at the bottom
+            Box(
                 modifier = Modifier
-                    .padding(16.dp)
-                    .fillMaxWidth(),
-                horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.Center
+                    .fillMaxWidth()
+                    .padding(8.dp),
+                contentAlignment = Alignment.Center
             ) {
-                Icon(
-                    painter = painterResource(id = tool.icon),
-                    contentDescription = null,
-                    modifier = Modifier.size(48.dp),
-                    tint = MaterialTheme.colorScheme.primary
-                )
-                
-                Text(
-                    text = tool.name,
-                    style = MaterialTheme.typography.titleMedium,
-                    textAlign = TextAlign.Center,
-                    modifier = Modifier.padding(top = 8.dp)
-                )
-                
-                Text(
-                    text = tool.description,
-                    style = MaterialTheme.typography.bodySmall,
-                    textAlign = TextAlign.Center,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
-                    modifier = Modifier.padding(top = 4.dp)
-                )
+                IconButton(
+                    onClick = { showInfoDialog = true },
+                    modifier = Modifier
+                        .size(36.dp)
+                        .background(InfoButtonBackground, CircleShape)
+                ) {
+                    Icon(
+                        imageVector = Icons.Default.Info,
+                        contentDescription = "Tool Info",
+                        tint = CardBackgroundLight,
+                        modifier = Modifier.size(20.dp)
+                    )
+                }
             }
         }
     }
@@ -127,11 +134,13 @@ fun ToolCard(
                         modifier = Modifier.fillMaxWidth(),
                         verticalAlignment = Alignment.CenterVertically
                     ) {
-                        Icon(
-                            painter = painterResource(id = tool.icon),
+                        Image(
+                            painter = painterResource(id = R.drawable.img_food),
                             contentDescription = null,
-                            modifier = Modifier.size(32.dp),
-                            tint = MaterialTheme.colorScheme.primary
+                            modifier = Modifier
+                                .size(48.dp)
+                                .clip(RoundedCornerShape(8.dp)),
+                            contentScale = ContentScale.Crop
                         )
                         
                         Text(

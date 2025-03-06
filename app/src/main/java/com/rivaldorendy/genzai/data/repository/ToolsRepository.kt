@@ -16,16 +16,23 @@ class ToolsRepository @Inject constructor() {
      * Get all available AI tools
      */
     fun getTools(): List<AITool> {
-        return listOf(
-            AITool(
-                id = "ai_ngeles_pro",
-                name = "AI Ngeles Pro",
-                description = "Create creative excuses effortlessly",
-                icon = R.drawable.ic_excuse, // We'll create this drawable later
-                route = Screen.AINgelesPro.route
-            )
-            // More tools can be added here in the future
+        // For demo purposes, we'll create multiple instances of the same tool
+        // to match the screenshot
+        val aiNgelesPro = AITool(
+            id = "ai_ngeles_pro",
+            name = "AI Ngeles Pro",
+            description = "Create creative excuses effortlessly",
+            icon = R.drawable.ic_excuse,
+            route = Screen.AINgelesPro.route
         )
+        
+        // Create a list with 9 copies of the tool to match the screenshot
+        val tools = mutableListOf<AITool>()
+        repeat(9) { index ->
+            tools.add(aiNgelesPro.copy(id = "${aiNgelesPro.id}_$index"))
+        }
+        
+        return tools
     }
     
     /**

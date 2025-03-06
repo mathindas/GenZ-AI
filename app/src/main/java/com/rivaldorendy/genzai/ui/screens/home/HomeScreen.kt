@@ -1,5 +1,6 @@
 package com.rivaldorendy.genzai.ui.screens.home
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -25,6 +26,7 @@ import com.rivaldorendy.genzai.data.model.AITool
 import com.rivaldorendy.genzai.ui.components.AppBar
 import com.rivaldorendy.genzai.ui.components.SearchBar
 import com.rivaldorendy.genzai.ui.components.ToolCard
+import com.rivaldorendy.genzai.ui.theme.HomeBackgroundLight
 import com.rivaldorendy.genzai.ui.viewmodels.HomeViewModel
 
 /**
@@ -50,13 +52,14 @@ fun HomeScreen(
                 onSettingsClick = onNavigateToSettings
             )
         },
-        modifier = modifier.fillMaxSize()
+        modifier = modifier.fillMaxSize(),
+        containerColor = HomeBackgroundLight // Set the background color to light blue
     ) { paddingValues ->
         Surface(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(paddingValues),
-            color = MaterialTheme.colorScheme.background
+            color = HomeBackgroundLight // Set the surface color to match the background
         ) {
             Column(
                 modifier = Modifier.fillMaxSize()
@@ -85,7 +88,7 @@ private fun ToolsGrid(
     modifier: Modifier = Modifier
 ) {
     LazyVerticalGrid(
-        columns = GridCells.Fixed(2),
+        columns = GridCells.Fixed(3), // Change to 3 columns to match the image
         contentPadding = PaddingValues(12.dp),
         horizontalArrangement = Arrangement.spacedBy(12.dp),
         verticalArrangement = Arrangement.spacedBy(12.dp),
